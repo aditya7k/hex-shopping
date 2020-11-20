@@ -1,0 +1,44 @@
+market-metrics
+├── adapters
+│ ├── inbound
+│ │ └── web
+│ │     └── src
+│ │         ├── main
+│ │         │ ├── kotlin
+│ │         │ └── resources
+│ │         └── test
+│ │             ├── kotlin
+│ │             └── resources
+│ └── outbound
+│     ├── repository
+│       └── inmemory
+│           └── src
+│               ├── main
+│               │ └── kotlin
+│               └── test
+│                  └── kotlin
+├── buildSrc
+│ └── src
+│     └── main
+│         └── kotlin
+├── configuration
+│ └── runtime-files
+│     └── src
+│         └── main
+│             └── resources
+├── domain
+│ └── src
+│     ├── main
+│     │ ├── kotlin
+│     │ └── resources
+│     └── test
+│       ├── kotlin
+│       └── resources
+├── monitoring
+│ └── dashboards
+├── starter
+  └── src
+      ├── main
+      │ └── kotlin
+      └── test
+          └── kotlin

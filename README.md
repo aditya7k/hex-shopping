@@ -1,4 +1,4 @@
-# hex-shopping
+### hex-shopping
 
 - install gradle
 
@@ -8,7 +8,11 @@
 
 [gradle init steps](https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html)
 
-#### Issues
+### Issues
 
  - Resolution: Could not find or load main class worker.org.gradle.process.internal.worker.GradleWorkerMain
 stop gradle daemons : ```./gradlew --stop``` 
+
+### Target Directory Layout
+
+
