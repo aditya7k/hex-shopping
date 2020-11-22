@@ -9,6 +9,7 @@
 
 rootProject.name = "hex-shopping"
 module("domain")
+module("starter")
 module("configuration", "runtime-files")
 
 fun module(firstPathSegment: String, vararg pathSegments: String) {
