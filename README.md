@@ -16,3 +16,7 @@ stop gradle daemons : ```./gradlew --stop```
 ### Target Directory Layout
 
 
+### Running locally
+```./gradlew run```
+### Main Class 
+``com.hex.shopping.Starter``

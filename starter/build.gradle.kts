@@ -20,6 +20,7 @@ application {
 
 dependencies {
     api(project(":adapters-inbound-web"))
+    runtimeOnly(project(":configuration-runtime-files"))
 
     // Align versions of all Kotlin components
     implementation(platform(kotlinBom()))
