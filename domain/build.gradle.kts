@@ -23,7 +23,3 @@ dependencies {
 
     testImplementation(assertK())
 }
-
-repositories {
-    mavenCentral()
-}

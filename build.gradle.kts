@@ -10,12 +10,6 @@ plugins {
 version = "0.1"
 group = "com.hex.shopping"
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-    jcenter()
-}
-
 allprojects {
 
     apply {
@@ -23,6 +17,12 @@ allprojects {
         plugin<JavaPlugin>()
         plugin<JavaLibraryPlugin>()
         plugin("org.jetbrains.kotlin.jvm")
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
     }
 
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
