@@ -1,7 +1,5 @@
-package com.hex.shopping
+package com.hex.shopping.domain.ports
 
 interface Shop {
-
     val name: String
-
 }

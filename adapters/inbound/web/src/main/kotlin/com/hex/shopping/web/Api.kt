@@ -19,4 +19,13 @@ object Api {
         }
     }
 
+    object Shop {
+        @Controller("/")
+        interface ShopApi {
+            @Get("/shop/name")
+            @Produces(MediaType.APPLICATION_JSON)
+            suspend fun shopName() : HttpResponse<String>
+        }
+    }
+
 }

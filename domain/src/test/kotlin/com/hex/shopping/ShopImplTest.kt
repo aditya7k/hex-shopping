@@ -1,6 +1,7 @@
 package com.hex.shopping
 
 import assertk.assertThat
+import com.hex.shopping.domain.ShopImpl
 import org.junit.jupiter.api.Test
 
 class ShopImplTest {

@@ -34,6 +34,8 @@ allOpen {
 }
 
 dependencies {
+    api(project(":domain"))
+
     // Align versions of all Kotlin components
     implementation(platform(kotlinBom()))
     // Use the Kotlin JDK 8 standard library.
