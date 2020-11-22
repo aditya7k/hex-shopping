@@ -1,8 +1,8 @@
-import Dependencies.assertk
+import Dependencies.assertK
 import Dependencies.junitJupiter
 import Dependencies.junitJupiterEngine
 import Dependencies.kotlinBom
-import Dependencies.kotlinStlibJdk8
+import Dependencies.kotlinStLibraryJdk8
 
 plugins {
 }
@@ -13,7 +13,7 @@ dependencies {
     implementation(platform(kotlinBom()))
 
     // Use the Kotlin JDK 8 standard library.
-    implementation(kotlinStlibJdk8())
+    implementation(kotlinStLibraryJdk8())
 
     // Use JUnit Jupiter API for testing.
     testImplementation(junitJupiter())
@@ -21,7 +21,7 @@ dependencies {
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly(junitJupiterEngine())
 
-    testImplementation(assertk())
+    testImplementation(assertK())
 }
 
 repositories {

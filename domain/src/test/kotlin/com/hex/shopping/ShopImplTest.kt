@@ -11,4 +11,5 @@ class ShopImplTest {
         val shop = ShopImpl(shopName);
         assertThat(shop.name).equals(shopName)
     }
+
 }

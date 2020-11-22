@@ -12,11 +12,11 @@ object Dependencies {
     fun micronautTest(version: String = Versions.micronaut): ModuleDependency = DefaultExternalModuleDependency("io.micronaut.test", "micronaut-test-junit5", version)
 
     fun kotlinBom(version: String = Versions.kotlin): ModuleDependency = kotlin("kotlin-bom", version)
-    fun kotlinStlibJdk8(version: String = Versions.kotlin): ModuleDependency = kotlin("kotlin-stdlib-jdk8", version)
+    fun kotlinStLibraryJdk8(version: String = Versions.kotlin): ModuleDependency = kotlin("kotlin-stdlib-jdk8", version)
 
     fun junitJupiter(version:  String = Versions.junit): ModuleDependency = junit("junit-jupiter-api", version)
     fun junitJupiterEngine(version:  String = Versions.junit): ModuleDependency = junit("junit-jupiter-engine", version)
-    fun assertk(version : String = Versions.assertK) : ModuleDependency = DefaultExternalModuleDependency("com.willowtreeapps.assertk", "assertk-jvm", version)
+    fun assertK(version : String = Versions.assertK) : ModuleDependency = DefaultExternalModuleDependency("com.willowtreeapps.assertk", "assertk-jvm", version)
 
     fun micronautBom(version: String = Versions.micronaut): ModuleDependency = micronaut("micronaut-bom", version)
     fun micronautInject(version: String = Versions.micronaut): ModuleDependency = micronaut("micronaut-inject-java", version)
@@ -26,9 +26,9 @@ object Dependencies {
     fun micronautManagement(version: String = Versions.micronaut): ModuleDependency = micronaut("micronaut-management", version)
     fun micronautHttpServerNetty(version: String = Versions.micronaut): ModuleDependency = micronaut("micronaut-http-server-netty", version)
 
-
     private fun log4j2(name: String, version: String = Versions.log4j2): ModuleDependency = DefaultExternalModuleDependency("org.apache.logging.log4j", name, version)
     private fun kotlin(name: String, version: String = Versions.kotlin): ModuleDependency = DefaultExternalModuleDependency("org.jetbrains.kotlin", name, version)
     private fun junit(name: String, version: String = Versions.junit): ModuleDependency = DefaultExternalModuleDependency("org.junit.jupiter", name, version)
     private fun micronaut(name: String, version: String = Versions.micronaut): ModuleDependency = DefaultExternalModuleDependency("io.micronaut", name, version)
+
 }

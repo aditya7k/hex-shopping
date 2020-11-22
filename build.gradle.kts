@@ -1,8 +1,3 @@
-import Dependencies.assertk
-import Dependencies.junitJupiter
-import Dependencies.junitJupiterEngine
-import Dependencies.kotlinBom
-import Dependencies.kotlinStlibJdk8
 
 plugins {
     idea
@@ -20,8 +15,6 @@ repositories {
     mavenCentral()
     jcenter()
 }
-
-
 
 allprojects {
 
@@ -53,6 +46,5 @@ allprojects {
             preferProjectModules()
         }
     }
-
 
 }
