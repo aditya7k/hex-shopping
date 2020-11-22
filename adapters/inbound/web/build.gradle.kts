@@ -1,26 +1,39 @@
+import Dependencies.annotationAPI
 import Dependencies.assertK
+import Dependencies.jacksonKotlin
 import Dependencies.junitJupiter
 import Dependencies.junitJupiterEngine
 import Dependencies.kotlinBom
+import Dependencies.kotlinLogging
 import Dependencies.kotlinStLibraryJdk8
+import Dependencies.kotlinxCoroutine
+import Dependencies.log4jApi
+import Dependencies.log4jCore
+import Dependencies.log4jSlf4j
 import Dependencies.micronautBom
+import Dependencies.micronautHttpClient
+import Dependencies.micronautHttpServerNetty
 import Dependencies.micronautInject
+import Dependencies.micronautKotlinRuntime
+import Dependencies.micronautManagement
 import Dependencies.micronautRuntime
 import Dependencies.micronautTest
 import Dependencies.micronautValidation
 
 plugins {
-    application
     kotlin("kapt")
+    kotlin("plugin.allopen")
 }
 
-application {
-    mainClass.set("com.hex.shopping.Starter")
+allOpen {
+    annotations(
+            "io.micronaut.aop.Around",
+            "io.micronaut.http.annotation.Controller",
+            "javax.inject.Singleton"
+    )
 }
 
 dependencies {
-    api(project(":adapters-inbound-web"))
-
     // Align versions of all Kotlin components
     implementation(platform(kotlinBom()))
     // Use the Kotlin JDK 8 standard library.
@@ -53,6 +66,26 @@ dependencies {
 
     //micronaut dependencies
     implementation(micronautRuntime())
+    implementation(micronautHttpClient())
+    implementation(micronautManagement())
+    implementation(micronautHttpServerNetty())
+    implementation(micronautKotlinRuntime())
+    implementation(kotlinxCoroutine())
+
+    // other dependencies
+    implementation(annotationAPI())
+
+    //micronaut test dependency
     testImplementation(micronautTest())
+
+    //logging
+    implementation(log4jCore())
+    implementation(kotlinLogging())
+    runtimeOnly(log4jApi())
+    runtimeOnly(log4jSlf4j())
+
+    //json
+    implementation(jacksonKotlin())
+
 
 }

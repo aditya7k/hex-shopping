@@ -6,4 +6,6 @@ object Versions {
     const val log4j2 = "2.13.1"
     const val coroutine = "1.3.9"
     const val assertK = "0.23"
+    const val jackson = "2.11.3"
+    const val kotlinLogging = "1.12.0"
 }

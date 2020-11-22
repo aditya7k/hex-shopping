@@ -10,6 +10,9 @@ object Dependencies {
     fun annotationAPI(version: String = Versions.annotationApi): ModuleDependency = DefaultExternalModuleDependency("javax.annotation", "javax.annotation-api", version)
     fun micronautKotlinRuntime(version: String = Versions.micronaut): ModuleDependency = DefaultExternalModuleDependency("io.micronaut.kotlin", "micronaut-kotlin-runtime", version)
     fun micronautTest(version: String = Versions.micronaut): ModuleDependency = DefaultExternalModuleDependency("io.micronaut.test", "micronaut-test-junit5", version)
+    fun kotlinxCoroutine(version: String = Versions.coroutine) : ModuleDependency = DefaultExternalModuleDependency ("org.jetbrains.kotlinx","kotlinx-coroutines-core", version)
+    fun jacksonKotlin(version: String = Versions.jackson ) : ModuleDependency = DefaultExternalModuleDependency ("com.fasterxml.jackson.module","jackson-module-kotlin", version)
+    fun kotlinLogging(version: String = Versions.kotlinLogging ) : ModuleDependency = DefaultExternalModuleDependency ("io.github.microutils","kotlin-logging",version)
 
     fun kotlinBom(version: String = Versions.kotlin): ModuleDependency = kotlin("kotlin-bom", version)
     fun kotlinStLibraryJdk8(version: String = Versions.kotlin): ModuleDependency = kotlin("kotlin-stdlib-jdk8", version)

@@ -11,6 +11,7 @@ rootProject.name = "hex-shopping"
 module("domain")
 module("starter")
 module("configuration", "runtime-files")
+module("adapters", "inbound", "web")
 
 fun module(firstPathSegment: String, vararg pathSegments: String) {
 
